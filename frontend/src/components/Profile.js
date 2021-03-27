@@ -33,13 +33,18 @@ const Profile = (props) => {
       <div className="container">
         <h1>Hello {state.user.username}!</h1>
         <h2>Topics you are interested in:</h2>
-        {state.topics.map((topic) => {
-          return (
-            <div>
-              <p>{topic}</p>
-            </div>
-          );
-        })}
+        <div className="d-flex">
+          {state.topics.map((topic) => {
+            return (
+              <div
+                className="text-left m-2 p-1 d-inline-block"
+                style={{ backgroundColor: "#D6D1D0" }}
+              >
+                <p>{topic}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
