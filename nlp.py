@@ -1,11 +1,11 @@
 import pandas as pd
 import nltk
 import numpy as np
+import gensim
 from nltk.stem.porter import *
 from nltk.stem import WordNetLemmatizer, SnowballStemmer
 from gensim.parsing.preprocessing import STOPWORDS
 from gensim.utils import simple_preprocess
-import gensim
 from sklearn.datasets import fetch_20newsgroups
 
 newsgroups_train = fetch_20newsgroups(subset='train')
