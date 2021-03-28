@@ -15,6 +15,7 @@ urlpatterns  = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('event/<int:pk>', views.EventViewSet.as_view({'get': 'retrieve'})),
     path('event/', views.EventViewSet.as_view({'get': 'list', 'post': 'create'})),
-    path('article/<int:pk>', views.ArticleViewSet.as_view({'get': 'retrieve'})),
-    path('article/', views.ArticleViewSet.as_view({'get': 'list', 'post': 'create'}))
+    path('post/<int:pk>', views.PostViewSet.as_view({'get': 'retrieve'})),
+    path('post/upvote/<int:pk>', views.PostUpvote.as_view()),
+    path('post/', views.PostViewSet.as_view({'get': 'list', 'post': 'create'}))
 ]

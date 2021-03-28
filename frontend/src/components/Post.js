@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+
 const Post = (props) => {
+  const id = props.match.params.id
   const [state, setState] = useState({
     user: { username: "HyperionLegion" },
     post_title: "CLIMATE CHANGE",
@@ -16,7 +18,6 @@ const Post = (props) => {
       "wow i didn't know that",
     ],
   });
-  const [stocks, setStocks] = useState([]);
 
   const requestOptions = {
     method: "GET",
@@ -26,7 +27,7 @@ const Post = (props) => {
   };
 
   const callAPI = () => {
-    fetch(`${process.env.REACT_APP_API_ENDPOINT}/post/`, requestOptions)
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/post/${id}`, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         if (data !== undefined) {
@@ -75,7 +76,7 @@ const Post = (props) => {
         style={{ backgroundColor: "#F1EAE8", fontFamily: "Impact" }}
         className=" d-flex justify-content-center p-4"
       >
-        Post {props.match.params.id}
+        Post {id}
       </h1>
       <div className="container " style={{ fontFamily: "Courier New" }}>
         <h1 className="text-white">Hello {state.user.username}!</h1>
