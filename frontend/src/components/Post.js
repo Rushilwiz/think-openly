@@ -61,7 +61,7 @@ const Post = (props) => {
       },
       body: JSON.stringify({ postid: props.id }),
     };
-    fetch(`${process.env.REACT_APP_API_ENDPOINT}/postcomment`, requestOptions)
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/post/comments`, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -109,7 +109,7 @@ const Post = (props) => {
           </form>
           <div className="d-flex">
             <p className="bg-info rounded p-2 text-white">
-              {state.upvotes} Likes
+              {state.upvotes.length()} Likes
             </p>
           </div>
         </div>
