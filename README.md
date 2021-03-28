@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/rushilwiz/think-openly">
-    <img src=".github/logo.png" alt="Logo" width="480px" height="320px">
+    <img src=".github/logo.png" alt="Logo" width="240px" height="240px">
   </a>
 
   <h1 align="center">ThinkOpenly</h1>
