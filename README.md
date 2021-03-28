@@ -22,7 +22,7 @@
 We were inspired to do this project in light of the women’s advocacy and their troubles. One of our members was scrolling through instagram and saw this and thought that it would be useful to have a similar platform catered to individuals to post about their political views where policy makers can actually see support for certain topics.
 
 ## What it does
-PolitTalk is similar to StackOverflow or StackExchange. Users can post their ideas on certain political topics and the aim is to have real world politicians be able to respond and view the voices of who they represent (even those who may not be outspoken on a day to day basis). We use NLP to recommend posts users and politicans based on previous likes and comments. To ensure quality, we have politician and proffessionals' comments at the top. Politicians can use this app to see trends and advocates for minorities.
+ThinkOpenly is similar to StackOverflow or StackExchange. Users can post their ideas on certain political topics and the aim is to have real world politicians be able to respond and view the voices of who they represent (even those who may not be outspoken on a day to day basis). We use NLP to recommend posts users and politicans based on previous likes and comments. To ensure quality, we have politician and proffessionals' comments at the top. Politicians can use this app to see trends and advocates for minorities.
 
 ## How we built it
 We built this platform using reactJS which communicates with a Django backend. Our database is made with PostGreSQL and for our post/article recommendation system we used a Gensim open-source library to build a LDA model.
