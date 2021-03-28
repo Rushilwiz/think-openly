@@ -17,8 +17,8 @@ const Nav = (props) => {
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link text-white" href="/">
-              <span className="sr-only">(current)</span>
+            <a className="nav-link text-white" href="/about">
+              PoliTalk/Openly <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item">

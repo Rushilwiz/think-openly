@@ -10,7 +10,7 @@ import Events from "./components/Events";
 import Profile from "./components/Profile";
 import CreateEvent from "./components/CreateEvent";
 import CreatePost from "./components/CreatePost";
-
+import Main from "./components/Main";
 import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
 import Popper from "popper.js";
@@ -25,6 +25,7 @@ function App() {
         <Switch>
           <Route component={Signup} path="/register" />
           <Route component={Signin} path="/login" />
+          <Route component={Main} path="/about" />
           <ProtectedRoute component={CreateEvent} path="/createevent" />
           <ProtectedRoute component={CreatePost} path="/createpost" />
           <ProtectedRoute component={Posts} path="/posts" />

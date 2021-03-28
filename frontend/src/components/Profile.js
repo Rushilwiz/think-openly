@@ -28,14 +28,14 @@ const Profile = (props) => {
     callAPI();
   }, []);
   return (
-    <div>
+    <div className="" style={{ minHeight: "100vh" }}>
       <h1
         className="d-flex justify-content-center p-4"
-        style={{ backgroundColor: "#F1EAE8" }}
+        style={{ backgroundColor: "#F1EAE8", fontFamily: "Impact" }}
       >
         Profile
       </h1>
-      <div className="container">
+      <div className="container" style={{ fontFamily: "Courier New" }}>
         <h1>Hello {state.user.username}!</h1>
         <h2>Topics you are interested in:</h2>
         <div className="d-flex">

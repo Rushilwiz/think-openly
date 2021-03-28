@@ -70,67 +70,73 @@ const Post = (props) => {
     callAPI();
   }, []);
   return (
-    <div className="container">
-      <h1>Hello {state.user.username}!</h1>
-      <h1 className="d-flex justify-content-center m-2 p-4">
+    <div className="bg-dark" style={{ minHeight: "100vh" }}>
+      <h1
+        style={{ backgroundColor: "#F1EAE8", fontFamily: "Impact" }}
+        className=" d-flex justify-content-center p-4"
+      >
         Post {props.match.params.id}
       </h1>
-      <div className="card card-body " style={{ backgroundColor: "#F1EAE8" }}>
-        <h2 className="card-title">{state.post_title}</h2>
-        <p className="text-left">{state.post_text}</p>
-        <h4 className="text-left">Topics:</h4>
-        <div className="d-flex">
-          {state.topics.map((topic) => {
+      <div className="container " style={{ fontFamily: "Courier New" }}>
+        <h1 className="text-white">Hello {state.user.username}!</h1>
+
+        <div className="card card-body " style={{ backgroundColor: "#F1EAE8" }}>
+          <h1 className="card-title">{state.post_title}</h1>
+          <p className="text-left">{state.post_text}</p>
+          <h4 className="text-left">Topics:</h4>
+          <div className="d-flex">
+            {state.topics.map((topic) => {
+              return (
+                <div
+                  className="text-left m-2 p-1 d-inline-block"
+                  style={{ backgroundColor: "#D6D1D0" }}
+                >
+                  <p>{topic}</p>
+                </div>
+              );
+            })}
+          </div>
+          <form onSubmit={onSubmit} className="text-left">
+            <div id="form-group">
+              <input
+                className="btn btn-success text-left"
+                type="submit"
+                value="+1"
+              />
+            </div>
+            <br />
+          </form>
+          <div className="d-flex">
+            <p className="bg-info rounded p-2 text-white">
+              {state.upvotes} Likes
+            </p>
+          </div>
+        </div>
+        <form onSubmit={onComment}>
+          <div id="form-group" className="text-left">
+            <textarea
+              className="form-control"
+              id="comment"
+              type="text"
+              placeholder="Enter comment here..."
+            />
+            <input className="btn btn-primary" type="submit" value="Submit" />
+          </div>
+          <br />
+        </form>
+        <div className="text-left">
+          <h4 className="text-white">Comments:</h4>
+          {state.comments.map((comment) => {
             return (
               <div
-                className="text-left m-2 p-1 d-inline-block"
+                className="card card-body"
                 style={{ backgroundColor: "#D6D1D0" }}
               >
-                <p>{topic}</p>
+                <p className="card-text">{comment}</p>
               </div>
             );
           })}
         </div>
-        <form onSubmit={onSubmit} className="text-left">
-          <div id="form-group">
-            <input
-              className="btn btn-success text-left"
-              type="submit"
-              value="+1"
-            />
-          </div>
-          <br />
-        </form>
-        <div className="d-flex">
-          <p className="bg-info rounded p-2 text-white">
-            {state.upvotes} Likes
-          </p>
-        </div>
-      </div>
-      <form onSubmit={onComment}>
-        <div id="form-group">
-          <textarea
-            className="form-control"
-            id="comment"
-            type="text"
-            placeholder="Enter comment here..."
-          />
-          <input className="btn btn-primary" type="submit" value="Submit" />
-        </div>
-        <br />
-      </form>
-      <div className="text-left">
-        <h4>Comments:</h4>
-        {state.comments.map((comment) => {
-          return (
-            <div
-              className="card card-body"
-              style={{ backgroundColor: "#D6D1D0" }}
-            >
-              <p className="card-text">{comment}</p>
-            </div>
-          );
-        })}
       </div>
     </div>
   );

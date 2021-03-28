@@ -37,24 +37,34 @@ const Posts = (props) => {
   const maybePluralize = (count, noun, suffix = "s") =>
     `${count} ${noun}${count !== 1 ? suffix : ""}`;
   return (
-    <div>
+    <div className="bg-dark" style={{ minHeight: "100vh" }}>
       <h1
         className="d-flex justify-content-center p-4"
-        style={{ backgroundColor: "#F1EAE8" }}
+        style={{ backgroundColor: "#F1EAE8", fontFamily: "Impact" }}
       >
         Posts
       </h1>
-      <a className="btn btn-large btn-success" href="/createpost">
+      <a
+        className="btn btn-large btn-success"
+        href="/createpost"
+        style={{ fontFamily: "Courier New" }}
+      >
         Create Post
       </a>
-      <div className="container">
+      <div className="container" style={{ fontFamily: "Courier New" }}>
         <br></br>
-        <h1>Hello {state.user.username}!</h1>
-        {state.posts.map((post) => {
+        <h1 className="text-white">Hello {state.user.username}!</h1>
+        {state.posts.map((post, el) => {
+          let background;
+          if (el % 2 == 0) {
+            background = "#F1EAE8";
+          } else {
+            background = "#FFFFFF";
+          }
           return (
             <div
               className="card card-body text-left"
-              style={{ backgroundColor: "#F1EAE8" }}
+              style={{ backgroundColor: background }}
             >
               <a href={"/post/" + post.id} className="card-title">
                 {post.text}
