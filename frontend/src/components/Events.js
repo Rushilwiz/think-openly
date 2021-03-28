@@ -3,7 +3,48 @@ import React, { useState, useEffect } from "react";
 const Events = (props) => {
   const [state, setState] = useState({
     user: { username: "" },
-    events: [{ id: 1, upvotes: 0, text: "Green Earth" }],
+    events: [
+      {
+        id: 1,
+        upvotes: 0,
+        text: "Green Earth",
+        comments: 1,
+        topics: [
+          "climate change",
+          "global warming",
+          "earth",
+          "green environment",
+        ],
+      },
+      {
+        id: 2,
+        upvotes: 352,
+        text: "Walk for Gun Control",
+        comments: 53,
+        topics: ["gun control", "legislation"],
+      },
+      {
+        id: 3,
+        upvotes: 1,
+        text: "Rights for Gays",
+        comments: 0,
+        topics: ["LGBTQ", "policy"],
+      },
+      {
+        id: 4,
+        upvotes: 3,
+        text: "Black Lives Matter",
+        comments: 4,
+        topics: ["racial justice"],
+      },
+      {
+        id: 5,
+        upvotes: 24,
+        text: "Ending COVID-19",
+        comments: 12,
+        topics: ["health", "covid19"],
+      },
+    ],
   });
   const [stocks, setStocks] = useState([]);
 
@@ -27,21 +68,48 @@ const Events = (props) => {
   useEffect(() => {
     callAPI();
   }, []);
+  const maybePluralize = (count, noun, suffix = "s") =>
+    `${count} ${noun}${count !== 1 ? suffix : ""}`;
   return (
     <div>
-      <h1 className="d-flex justify-content-center m-2 p-4">Events</h1>
+      <h1
+        className="d-flex justify-content-center p-4"
+        style={{ backgroundColor: "#F1EAE8" }}
+      >
+        Events
+      </h1>
       <a className="btn btn-large btn-success" href="/createevent">
         Create Event
       </a>
       <div className="container">
+        <br></br>
+
         <h1>Hello {state.user.username}!</h1>
         {state.events.map((event) => {
           return (
-            <div className="card card-body">
+            <div
+              className="card card-body text-left"
+              style={{ backgroundColor: "#F1EAE8" }}
+            >
               <a className="card-title" href={"/event/" + event.id}>
                 {event.text}
               </a>
               <p className="text-success">+{event.upvotes}</p>
+              <p className="text-warning">
+                {maybePluralize(event.comments, "comment")}
+              </p>
+              <div className="d-flex">
+                {event.topics.map((topic) => {
+                  return (
+                    <div
+                      className="text-left mr-3 p-2 d-inline-block"
+                      style={{ backgroundColor: "#D6D1D0" }}
+                    >
+                      <p>{topic}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           );
         })}

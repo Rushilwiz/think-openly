@@ -71,7 +71,7 @@ const Event = (props) => {
         Event {props.match.params.id}
       </h1>
 
-      <div className="card card-body">
+      <div className="card card-body " style={{ backgroundColor: "#F1EAE8" }}>
         <h1 className="card-title">Event: {state.event_title}</h1>
         <a className="" href={state.website}>
           Website

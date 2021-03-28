@@ -29,7 +29,12 @@ const Profile = (props) => {
   }, []);
   return (
     <div>
-      <h1 className="d-flex justify-content-center m-2 p-4">Profile</h1>
+      <h1
+        className="d-flex justify-content-center p-4"
+        style={{ backgroundColor: "#F1EAE8" }}
+      >
+        Profile
+      </h1>
       <div className="container">
         <h1>Hello {state.user.username}!</h1>
         <h2>Topics you are interested in:</h2>

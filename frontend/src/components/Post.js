@@ -75,7 +75,7 @@ const Post = (props) => {
       <h1 className="d-flex justify-content-center m-2 p-4">
         Post {props.match.params.id}
       </h1>
-      <div className="card card-body">
+      <div className="card card-body " style={{ backgroundColor: "#F1EAE8" }}>
         <h2 className="card-title">{state.post_title}</h2>
         <p className="text-left">{state.post_text}</p>
         <h4 className="text-left">Topics:</h4>

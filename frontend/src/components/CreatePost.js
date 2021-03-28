@@ -18,7 +18,10 @@ const CreatePost = (props) => {
       });
   };
   return (
-    <div className="container card card-body text-left">
+    <div
+      className="container card card-body text-left "
+      style={{ backgroundColor: "#F1EAE8" }}
+    >
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <h1>Create Post</h1>

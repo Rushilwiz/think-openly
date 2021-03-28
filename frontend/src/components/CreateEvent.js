@@ -18,7 +18,10 @@ const CreateEvent = (props) => {
       });
   };
   return (
-    <div className="container card card-body text-left">
+    <div
+      className="container card card-body text-left"
+      style={{ backgroundColor: "#F1EAE8" }}
+    >
       <form onSubmit={onSubmit}>
         <h1>Create Event</h1>
         <div className="form-group">
