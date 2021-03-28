@@ -18,6 +18,36 @@
 
 ## Demo: https://www.youtube.com/watch?v=z9iJFXSoQCM
 
+## How to run
+
+1. After cloning repo make sure you have the latest `nodejs` LTS and `python3.8` installed
+2. Install pipenv
+```
+cd backend
+python -m pip install pipenv
+```
+3. Install deps
+```
+pipenv install
+```
+4. Set up django
+```
+cd config
+cp .env.sample .env
+cd ..
+pipenv run python manage.py migrate
+pipenv run python manage.py runserver
+```
+5. Open another terminal window to run the frontend and run the following commands
+```
+npm install -g yarn
+cd frontend
+yarn
+yarn start
+```
+<i>Note: You must have both the backend and frontend running, specifically on ports 8000 and 3000 respectively.</i>
+
+
 ## Inspiration
 We were inspired to do this project in light of the women’s advocacy and their troubles. One of our members was scrolling through instagram and saw this and thought that it would be useful to have a similar platform catered to individuals to post about their political views where policy makers can actually see support for certain topics.
 
