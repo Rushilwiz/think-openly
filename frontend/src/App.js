@@ -12,8 +12,6 @@ import CreateEvent from "./components/CreateEvent";
 import CreatePost from "./components/CreatePost";
 import Main from "./components/Main";
 import "bootstrap/dist/css/bootstrap.min.css";
-import $ from "jquery";
-import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
 import ProtectedRoute from "./components/ProtectedRoute.js";
