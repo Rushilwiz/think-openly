@@ -5,7 +5,7 @@ const Post = (props) => {
     user: { username: "HyperionLegion" },
     post_title: "CLIMATE CHANGE",
     post_text: "We are gonna die if we don't do anything about climate change!",
-    upvotes: 0,
+    upvotes: 2,
     topics: ["climate change", "death"],
     comments: [
       "this guy is weird",

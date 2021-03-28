@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Profile = (props) => {
   const [state, setState] = useState({
-    user: { username: "" },
+    user: { username: "HyperionLegion" },
     topics: ["climate change", "covid19"],
   });
   const [stocks, setStocks] = useState([]);
