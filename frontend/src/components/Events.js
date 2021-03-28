@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Events = (props) => {
   const [state, setState] = useState({
-    user: { username: "" },
+    user: { username: "HyperionLegion" },
     events: [
       {
         id: 1,

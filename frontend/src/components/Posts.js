@@ -2,14 +2,35 @@ import React, { useState, useEffect } from "react";
 
 const Posts = (props) => {
   const [state, setState] = useState({
-    user: { username: "" },
+    user: { username: "HyperionLegion" },
     posts: [
       {
         id: 1,
         upvotes: 2,
         text: "Action for Climate Change",
-        comments: 0,
+        comments: 6,
         topics: ["climate change", "air pollution"],
+      },
+      {
+        id: 2,
+        upvotes: 19,
+        text: "Cancel Culture",
+        comments: 14,
+        topics: ["cancel", "celebrities"],
+      },
+      {
+        id: 3,
+        upvotes: 152,
+        text: "Stimulus Checks",
+        comments: 40,
+        topics: ["stimulus checks"],
+      },
+      {
+        id: 4,
+        upvotes: 24,
+        text: "Asian Hate Crimes",
+        comments: 14,
+        topics: ["hate", "Asian"],
       },
     ],
   });
